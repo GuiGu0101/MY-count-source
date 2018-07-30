@@ -19,7 +19,8 @@ export default class Dashboard extends Component {
     timer = 0;
 
     getDashData() {
-        const p = dashboardCallBack.getDashData();
+        const land = this.props.params.land;
+        const p = dashboardCallBack.getDashDataWater({land});
         p.then(res => {
             if (typeof res.json === 'function') {
                 return res.json();
@@ -56,7 +57,7 @@ export default class Dashboard extends Component {
         const {users} = this.state;
         return (
             <div className="main_BG">
-                <div className="dash-title">重庆魅友家3周年庆-积分榜</div>
+                <div className="dash-title">重庆魅友家4周年庆-积分榜</div>
                 <div className="jf-table">
                     <div className="jf-line header">
                         <div>签到号</div>
@@ -64,6 +65,7 @@ export default class Dashboard extends Component {
                         <div>陆上积分</div>
                         <div>水上积分</div>
                         <div>总积分</div>
+                        <div>二轮名次</div>
                     </div>
                     {
                         users.map((user, index) => (
@@ -73,6 +75,7 @@ export default class Dashboard extends Component {
                                 <div>{user.land}</div>
                                 <div>{user.water}</div>
                                 <div>{user.total}</div>
+                                <div>{user.water_no}</div>
                             </div>
                         ))
                     }

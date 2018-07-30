@@ -1,0 +1,15 @@
+@import "../../base/fn";
+
+.qtui-btn_warn {
+    background-color: @qtuiBtnWarnBg;
+    &:not(.qtui-btn_disabled):visited {
+        color: @qtuiBtnFontColor;
+    }
+    &:not(.qtui-btn_disabled):active {
+        color: @qtuiBtnActiveFontColor;
+        background-color: @qtuiBtnWarnActiveBg;
+    }
+    &:after {
+        border-color: @qtuiBtnWarnBg;
+    }
+}

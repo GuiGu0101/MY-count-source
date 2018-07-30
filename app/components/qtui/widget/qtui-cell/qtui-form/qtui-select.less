@@ -1,0 +1,69 @@
+@import "../../../base/fn";
+
+.qtui-cell_select {
+    padding: 0;
+    .qtui-select {
+        padding-right: 30px;
+    }
+    .qtui-cell__bd{
+        &:after{
+            content: " ";
+            .setArrow(right, 6px, #C8C8CD, 2px);
+
+            position: absolute;
+            top: 50%;
+            right: @qtuiCellGapH;
+            margin-top: -4px;
+        }
+    }
+}
+
+.qtui-select {
+    -webkit-appearance: none;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    width: 100%;
+    font-size: inherit;
+    height: @qtuiCellHeight;
+    line-height: @qtuiCellHeight;
+    position: relative;
+    z-index: 1;
+    padding-left: @qtuiCellGapH;
+}
+
+.qtui-cell_select-before {
+    padding-right:@qtuiCellGapH;
+    .qtui-select{
+        width:@qtuiCellLabelWidth;
+        box-sizing: border-box;
+    }
+    .qtui-cell__hd {
+        position:relative;
+        &:after {
+            .setRightLine(@qtuiCellBorderColor);
+        }
+        &:before{
+            content: " ";
+            .setArrow(right, 6px, #C8C8CD, 2px);
+
+            position: absolute;
+            top: 50%;
+            right: @qtuiCellGapH;
+            margin-top: -4px;
+        }
+    }
+    .qtui-cell__bd {
+        padding-left:@qtuiCellGapH;
+        &:after{
+            display:none;
+        }
+    }
+}
+
+.qtui-cell_select-after {
+    padding-left:@qtuiCellGapH;
+    .qtui-select {
+        padding-left:0;
+    }
+}

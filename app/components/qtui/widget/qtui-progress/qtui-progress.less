@@ -1,0 +1,24 @@
+@import "../../base/fn";
+
+.qtui-progress {
+    display: flex;
+    align-items: center;
+}
+
+.qtui-progress__bar {
+    background-color: @qtuiProgressBg;
+    height: @qtuiProgressHeight;
+    flex: 1;
+}
+
+.qtui-progress__inner-bar {
+    width: 0;
+    height: 100%;
+    background-color: @qtuiProgressColor;
+}
+
+.qtui-progress__opr {
+    display: block;
+    margin-left: 15px;
+    font-size: 0;
+}

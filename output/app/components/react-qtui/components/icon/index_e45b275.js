@@ -1,0 +1,1 @@
+define("app/components/react-qtui/components/icon/index",function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(t,"__esModule",{value:!0});var c=e("app/components/react-qtui/components/icon/icon"),u=o(c);t["default"]=u["default"],n.exports=t["default"]});

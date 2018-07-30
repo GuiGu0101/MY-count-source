@@ -1,0 +1,41 @@
+@import "../../base/fn";
+
+.qtui-loadmore{
+    width: 65%;
+    margin:1.5em auto;
+    line-height: 1.6em;
+    font-size:14px;
+    text-align: center;
+}
+.qtui-loadmore__tips{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.qtui-loadmore_line{
+    border-top:1px solid @qtuiLineColorLight;
+    margin-top:2.4em;
+    .qtui-loadmore__tips{
+        position: relative;
+        top:-.9em;
+        padding:0 .55em;
+        background-color: #FFFFFF;
+        color:@qtuiTextColorGray;
+    }
+}
+.qtui-loadmore_dot{
+    .qtui-loadmore__tips{
+        padding:0 .16em;
+        &:before{
+            content: " ";
+            width:4px;
+            height:4px;
+            border-radius:50%;
+            background-color: @qtuiLineColorLight;
+            display: inline-block;
+            position: relative;
+            vertical-align: 0;
+            top:-.16em;
+        }
+    }
+}

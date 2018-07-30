@@ -1,0 +1,24 @@
+@import "../../base/fn";
+
+.qtui-btn_disabled {
+    color: @qtuiBtnDisabledFontColor;
+    &.qtui-btn_default {
+        color: @qtuiBtnDefaultDisabledFontColor;
+        background-color: @qtuiBtnDefaultDisabledBg;
+        &::after{
+            border-color: #cccccc;
+        }
+    }
+    &.qtui-btn_primary {
+        background-color: @qtuiBtnPrimaryDisabledBg;
+        &::after{
+            border-color: @qtuiBtnPrimaryDisabledBg;
+        }
+    }
+    &.qtui-btn_warn {
+        background-color: @qtuiBtnwarnDisabledBg;
+        &::after{
+            border-color: @qtuiBtnwarnDisabledBg;
+        }
+    }
+}

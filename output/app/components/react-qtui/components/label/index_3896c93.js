@@ -1,0 +1,1 @@
+define("app/components/react-qtui/components/label/index",function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(t,"__esModule",{value:!0});var a=e("app/components/react-qtui/components/label/label"),l=o(a);t["default"]=l["default"],n.exports=t["default"]});

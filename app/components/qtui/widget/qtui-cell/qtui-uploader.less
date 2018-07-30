@@ -1,0 +1,137 @@
+@import "../../base/fn";
+
+.qtui-uploader {}
+
+.qtui-uploader__hd {
+    display: flex;
+    padding-bottom: @qtuiCellGapV;
+    align-items: center;
+}
+
+.qtui-uploader__title {
+    flex: 1;
+}
+
+.qtui-uploader__info {
+    color: @qtuiTextColorTips;
+}
+
+.qtui-uploader__bd {
+    margin-bottom: @qtuiCellGapH - (@qtuiCellGapV + @qtuiUploaderFileSpacing);
+    margin-right: -@qtuiUploaderFileSpacing;
+    overflow: hidden;
+}
+
+.qtui-uploader__files {
+    list-style: none;
+}
+
+.qtui-uploader__file {
+    float: left;
+    margin-right: @qtuiUploaderFileSpacing;
+    margin-bottom: @qtuiUploaderFileSpacing;
+    width: @qtuiUploaderSize;
+    height: @qtuiUploaderSize;
+    background: no-repeat center center;
+    background-size: cover;
+    border-radius: @qtuiUploaderRadius;
+}
+
+.qtui-uploader__file_status {
+    position: relative;
+
+    &:before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .5);
+        border-radius: @qtuiUploaderRadius;
+    }
+
+    .qtui-uploader__file-content {
+        display: block;
+    }
+}
+
+.qtui-uploader__file-content {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    font-size: 14px;
+
+    .qtui-icon-warn {
+        display: inline-block;
+        font-size: 20px;
+
+        &::after {
+            content: " ";
+            position: absolute;
+            top: 2px;
+            bottom: 0;
+            left: 50%;
+            margin-left: -8px;
+            background-color: #ffffff;
+            z-index: -1;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.qtui-uploader__input-box {
+    float: left;
+    position: relative;
+    margin-right: @qtuiUploaderFileSpacing;
+    margin-bottom: @qtuiUploaderFileSpacing;
+    width: @qtuiUploaderSize - @qtuiUploaderBorderWidth * 2;
+    height: @qtuiUploaderSize - @qtuiUploaderBorderWidth * 2;
+    border: @qtuiUploaderBorderWidth solid @qtuiUploaderBorderColor;
+    border-radius: @qtuiUploaderRadius;
+
+    &:after,
+    &:before {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: @qtuiUploaderBorderColor;
+    }
+
+    &:before {
+        width: @qtuiUploaderBorderWidth + 1;
+        height: @qtuiUploaderSize / 2;
+    }
+
+    &:after {
+        width: @qtuiUploaderSize / 2;
+        height: @qtuiUploaderBorderWidth + 1;
+    }
+
+    &:active {
+        border-color: @qtuiUploaderActiveBorderColor;
+
+        &:after,
+        &:before {
+            background-color: @qtuiUploaderActiveBorderColor;
+        }
+    }
+}
+
+.qtui-uploader__input {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    .setTapColor();
+}

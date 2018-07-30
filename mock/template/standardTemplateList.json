@@ -1,0 +1,34 @@
+{
+  "list": [
+    {
+      "id": "000106",
+      "name": "请假",
+      "timeVersion": 33787
+    },
+    {
+      "id": "000107",
+      "name": "报销",
+      "timeVersion": 33787
+    },
+    {
+      "id": "000108",
+      "name": "请示",
+      "timeVersion": 33788
+    },
+    {
+      "id": "000109",
+      "name": "物品领用",
+      "timeVersion": 33787
+    },
+    {
+      "id": "000110",
+      "name": "外出",
+      "timeVersion": 33787
+    },
+    {
+      "id": "000111",
+      "name": "出差",
+      "timeVersion": 33787
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+//无侵入方式的公用类，不调用不会产生多余的代码
+//@import 'est/all.less';
+@use-autoprefixer: false;
+@default-font-size: 24px;
+@support-ie-version: 9;
+@support-old-ie: false;
+@support-html5: false;
+//变量
+@com-color: #ee2b4e;
+@yellow: #fff56c;
+@red: #ff2d4b; // 外卖红
+//公用方法
+.center() {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.all-center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.x-center() {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.y-center() {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.v-height(@height) {
+    height: @height;
+    line-height: @height;
+}
+
+.hide {
+    display: none!important
+}
+
+//动画方法
+.animate(@type, @duration: .5s, @delay: 0s, @ease: linear, @count: 1) {
+    animation: @type @duration @delay @ease;
+    animation-fill-mode: both;
+    animation-iteration-count: @count;
+}
+
+// 通用按钮 透明有边距
+.btn(@color: @red) {
+    width: 110px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 28px;
+    border: 2px solid @color; /*no*/
+    height: 50px;
+    line-height: 48px;
+    color: @color;
+    [data-dpr='1'] & {
+        border: 1px solid @color; /*no*/
+        line-height: 49px;
+    }
+    [data-dpr='3'] & {
+        border: 3px solid @color; /*no*/
+        line-height: 47px;
+    }
+}
+
+.pixel-border(@color) {
+    border: 1px solid @color; /*px*/
+}

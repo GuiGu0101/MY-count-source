@@ -1,0 +1,243 @@
+@import 'est/all.less';
+@import './public.less';
+@import './animate.less';
+
+.global-reset();
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  font-family: 'Microsoft YaHei', arial, helvetica, sans-serif;
+  // 安卓下面动画无法滚动 必须设置这个
+  .user-select(none);
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+  background-color: #f8f8f8;
+  min-height: 100vh;
+}
+
+/*去除黑色阴影*/
+
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+}
+
+//页面上的文字或者图片不被用户选择时候亦或者禁止长按保存图片
+a,
+img {
+  -webkit-touch-callout: none;
+  /* 禁止长按链接与图片弹出菜单 */
+}
+
+.item-transition-enter {
+  opacity: 0;
+  transition: all .3s ease-in;
+}
+
+.item-transition-enter.item-transition-enter-active {
+  opacity: 1;
+}
+
+// router转场动画效果
+.animate-slide-left-appear {
+  transform: translate(100%, 0);
+}
+
+.animate-slide-right-appear {
+  transform: translate(-100%, 0);
+}
+
+.animate-slide-left-appear.animate-slide-left-appear-active,
+.animate-slide-right-appear.animate-slide-right-appear-active {
+  transform: translate(0, 0);
+  transition: transform .2s ease-in;
+}
+
+.serial-number {
+  width: 32px;
+  height: 32px;
+  margin-left: -8px;
+  margin-right: -4px;
+  background-color: #53a3eb;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 32px;
+  color: #fff;
+  font-size: 24px;
+  transform: scale(.5);
+  flex: 0 0 auto;
+}
+
+.hasBottom {
+  .BmBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 50px;
+    overflow: auto;
+  }
+  .optionBar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 45px;
+    overflow: auto;
+  }
+}
+
+.bottom-button {
+  position: absolute !important;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  .qtui-btn::after {
+    content: none;
+    border: none;
+  }
+}
+
+.qtui-toast {
+  .sp-ico-warn {
+    font-size: 32px;
+  }
+}
+
+.react-qtui-infiniteloader {
+
+  overflow: hidden;
+
+  &__content {
+    height: 100%;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    z-index: 1; // fix 滑动几次后可滚动区域会卡住的问题
+  }
+}
+
+.qtui-loadmore.bg-gray {
+  .qtui-loadmore__tips {
+    background-color: #f8f8f8;
+  }
+}
+
+.badge-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #e64340;
+  &.badge-pos-header {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+  }
+}
+
+.badge-new {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  color: #FC7256;
+  padding: 0 5px;
+  margin-left: 8px;
+  vertical-align: text-top;
+  line-height: 16px;
+  &:after {
+    display: block;
+    content: '\200b';
+    position: absolute;
+    border-radius: 10px;
+    border: 1px solid #FC7256;
+    height: 200%;
+    width: 200%;
+    top: 0;
+    left: 0;
+    transform: scale(0.5);
+    transform-origin: top left;
+  }
+}
+
+.badge-disabled {
+  position: relative;
+  display: inline-block;
+  font-size: 12px;
+  color: #919191;
+  padding: 0 5px;
+  margin-left: 8px;
+  vertical-align: text-top;
+  line-height: 16px;
+  &:after {
+    display: block;
+    content: '\200b';
+    position: absolute;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    height: 200%;
+    width: 200%;
+    top: 0;
+    left: 0;
+    transform: scale(0.5);
+    transform-origin: top left;
+  }
+}
+
+.mainaaaa {
+  .qtui-cells:last-child {
+    margin-bottom: 16px;
+  }
+}
+
+.domain-name {
+  color: #919191;
+  font-size: 14px;
+}
+
+.main_BG {
+  background: radial-gradient(#00ACDC, darken(#00ACDC,15%));
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: auto;
+  h1 {
+    font-size: 64px;
+    color: #fff;
+    margin: 230px auto 0 auto;
+    text-align: center;
+  }
+}
+@media(max-width: 550px) {
+  .main_BG {
+    h1 {
+      font-size: 32px;
+      margin-top: 140px;
+    }
+  }
+}
+.main-nav {
+  display: flex;
+  width: 300px;
+  margin: 20px auto 0 auto;
+  > a {
+    color: #00ACDC;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    font-size: 32px;
+    text-align: center;
+    margin: 0 5px 0 5px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: #ffffff 0px 0px 5px 1px;
+    cursor: pointer;
+  }
+}

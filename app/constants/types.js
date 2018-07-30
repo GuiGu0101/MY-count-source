@@ -1,0 +1,18 @@
+// 各种请求状态常量
+
+// 全局数据
+export const SHOW_SUCCESS = 'SHOW_SUCCESS';
+export const SHOW_LOADING = 'SHOW_LOADING';
+export const SHOW_ERROR = 'SHOW_ERROR';
+export const HIDE_SUCCESS = 'HIDE_SUCCESS';
+export const HIDE_LOADING = 'HIDE_LOADING';
+export const HIDE_ERROR = 'HIDE_ERROR';
+
+
+// 获取当前用户的基本信息
+export const GET_BASEINFO_USER = 'GET_BASEINFO_USER';
+export const GET_BASEINFO_USER_REQUEST = 'GET_BASEINFO_USER_REQUEST';
+export const GET_BASEINFO_USER_SUCCESS = 'GET_BASEINFO_USER_SUCCESS';
+export const GET_BASEINFO_USER_FAILURE = 'GET_BASEINFO_USER_FAILURE';
+
+

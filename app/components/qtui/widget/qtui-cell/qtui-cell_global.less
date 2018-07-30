@@ -1,0 +1,81 @@
+@import "../../base/fn";
+
+.qtui-cells {
+    margin-top: @qtuiCellsMarginTop;
+    background-color: @qtuiCellBg;
+    line-height: @qtuiCellLineHeight;
+    font-size: @qtuiCellFontSize; //cell中间有效高度23px，跟客户端默认图标尺寸一致
+
+    overflow: hidden; //因为每个cell的border使用before元素left搞的，ie下伪元素的containing block估计跟标准不同，在cell上用oh不生效
+
+    // onepx
+    position: relative;
+    &:first-child{
+        margin-top: 0;
+    }
+}
+
+.qtui-cells__title {
+    margin-top: .77em; // 15px - 行高
+    margin-bottom: .3em; // 8px - 行高
+    padding-left: @qtuiCellGapH;
+    padding-right: @qtuiCellGapH;
+    color: @qtuiTextColorGray;
+    font-size: @qtuiCellTipsFontSize;
+
+    & + .qtui-cells {
+        margin-top: 0;
+    }
+}
+
+.qtui-cells__tips {
+    margin-top: .3em; // 8px - 行高
+    color: @qtuiTextColorGray;
+    padding-left: @qtuiCellGapH;
+    padding-right: @qtuiCellGapH;
+    font-size: @qtuiCellTipsFontSize;
+    &.warn{
+        color: #F57F4C;
+    }
+}
+
+.qtui-cell {
+    padding: @qtuiCellGapV @qtuiCellGapH;
+    position: relative; //这个是为了兼容cells容器onepx方案被before挡住而做的
+    display: flex;
+    align-items: center;
+    &:before {
+        .setTopLine(@qtuiCellBorderColor);
+    }
+    &:first-child {
+        &:before {
+            display: none;
+        }
+    }
+    &.qtui-cell_desc{
+        flex-wrap: wrap;
+    }
+}
+.qtui-cell_primary{
+    align-items: flex-start;
+}
+.qtui-cell__bd{
+    flex: 1;
+}
+.qtui-cell__ft {
+    text-align: right;
+    color: @qtuiTextColorGray;
+    font-size: @qtuiCellTipsFontSize;
+    line-height: @qtuiCellFontSize;
+}
+
+.qtui-cell__desc{
+    flex: 1 0 100%;
+    font-size: @qtuiCellTipsFontSize;
+    line-height: 20px;
+    margin-top: 4px;
+    color: @qtuiTextColorGray;
+    &.error{
+        color:@qtuiTextColorWarn;
+    }
+}

@@ -1,0 +1,58 @@
+@import "../../base/fn";
+
+.qtui-tabbar {
+    display: flex;
+    position: absolute;
+    z-index: 500;
+    bottom: 0;
+    width: 100%;
+    background-color: #F7F7FA;
+
+    &:before {
+        .setTopLine(#C0BFC4);
+    }
+}
+
+.qtui-tabbar__item {
+    display: block;
+    flex: 1;
+    padding: 5px 0 0;
+    font-size: 0;
+    color: @qtuiTextColorGray;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+    .setTapColor();
+
+    &.qtui-bar__item_on {
+        border-bottom-color: @qtuiColorPrimary;
+        .qtui-tabbar__icon,
+        .qtui-tabbar__icon > i,
+        .qtui-tabbar__label {
+            color: @qtuiColorPrimary;
+        }
+    }
+}
+
+.qtui-tabbar__icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+
+    i&,
+    > i {
+        font-size: 24px;
+        color: @qtuiTextColorGray;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.qtui-tabbar__label {
+    text-align: center;
+    color: @qtuiTextColorGray;
+    font-size: 12px;
+    line-height: 1.8;
+}

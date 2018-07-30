@@ -1,0 +1,145 @@
+@import "../../base/fn";
+
+.qtui-dialog {
+    position: fixed;
+    z-index: 5000;
+    width: 80%;
+    max-width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: @qtuiDialogBackgroundColor;
+    text-align: center;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.qtui-dialog__hd {
+    padding: 1.3em @qtuiDialogGapWidth .5em;
+}
+.qtui-dialog__title {
+    font-weight: 400;
+    font-size: 17px;
+}
+.qtui-dialog__bd {
+    padding: 0 @qtuiDialogGapWidth 1.5em;
+    font-size: 13px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: #030303;
+    &:first-child{
+        padding: 1.3em @qtuiDialogGapWidth 1.3em;
+        color:#353535;
+        font-size: 15px;
+        line-height: 21px;
+    }
+}
+.qtui-dialog__ft {
+    position: relative;
+    line-height: 48px;
+    font-size: 18px;
+    display: flex;
+    &:after {
+        content: " ";
+        .setTopLine(@qtuiDialogLineColor);
+    }
+}
+.qtui-dialog__btn {
+    display: block;
+    flex: 1;
+    color: @qtuiLinkColorDefault;
+    text-decoration: none;
+    .setTapColor();
+    &:active {
+        background-color: @qtuiDialogLinkActiveBc;
+    }
+
+    position: relative;
+    &:after {
+        content: " ";
+        .setLeftLine(@qtuiDialogLineColor);
+    }
+    &:first-child {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.qtui-skin_android{
+    &.qtui-dialog {
+        border-radius: 3px;
+        box-shadow: 0 6px 30px 0 rgba(0, 0, 0, .1);
+    }
+    .qtui-dialog__title{
+        font-size: 18px;
+    }
+    .qtui-dialog__hd{
+        text-align: center;
+        padding: 1.75em @qtuiDialogGapWidth 0.5em;
+    }
+    .qtui-dialog__bd{
+        color:@qtuiTextColorGray;
+        padding:.25em @qtuiDialogGapWidth 1.7em;
+        font-size: 17px;
+        // text-align: left;
+        &:first-child{
+            padding:1.6em @qtuiDialogGapWidth 1.9em;
+            color:#353535;
+        }
+    }
+    .qtui-dialog__ft{
+        display: flex;
+        text-align: center;
+        line-height: 42px;
+        font-size: 18px;
+        padding:0 @qtuiDialogGapWidth 1.7em;
+        &:after{
+            display: none;
+        }
+    }
+    .qtui-dialog__btn{
+        flex:1;
+        vertical-align: top;
+        padding:0 .8em;
+        border:1px solid transparent;
+        border-radius: 2.5px;
+        margin-right: 0.8em;
+
+        &:after{
+            display: none;
+        }
+
+        &:active{
+            background-color: rgba(0,0,0,.06);
+        }
+        &:visited{
+            background-color: rgba(0,0,0,.06);
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    .qtui-dialog__btn_default {
+        color: @qtuiDialogLinkColor;
+        border-color: @qtuiDialogLinkColor;
+    }
+    .qtui-dialog__btn_primary {
+        color: #FFFFFF;
+        border-color: @qtuiDialogBtnPrimaryBc;
+        background-color: @qtuiDialogBtnPrimaryBc;
+        &:active{
+            background-color: darken(@qtuiDialogBtnPrimaryBc, 10%);
+        }
+        &:visited{
+            background-color: darken(@qtuiDialogBtnPrimaryBc, 10%);
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .qtui-dialog {
+        width: 35%;
+    }
+}

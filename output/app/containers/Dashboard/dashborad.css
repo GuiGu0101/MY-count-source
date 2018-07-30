@@ -1,0 +1,42 @@
+.jf-table {
+  font-size: 24px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.jf-table .jf-line {
+  display: flex;
+  border-top: 1px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+}
+
+.jf-table .jf-line > div {
+  flex: 1;
+  text-align: center;
+  border-left: 1px solid #ffffff;
+}
+
+.jf-table .jf-line > div:last-child {
+  border-right: 1px solid #ffffff;
+}
+
+.jf-table .jf-line.header {
+  color: #00ACDC;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.jf-table .jf-line:last-child {
+  border-bottom: 1px solid #ffffff;
+}
+
+.jf-table .jf-line:nth-child(2n) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dash-title {
+  font-size: 48px;
+  color: #fff;
+  text-align: center;
+  margin: 24px 0;
+}

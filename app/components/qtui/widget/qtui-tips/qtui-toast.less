@@ -1,0 +1,35 @@
+@import "../../base/fn";
+
+.qtui-toast {
+    position: fixed;
+    z-index: 5000;
+    width: 6.6em;
+    min-height: 5.6em;
+    top: 180px;
+    left: 50%;
+    margin-left: -3.3em;
+    background: rgba(40, 40, 40, 0.75);
+    text-align: center;
+    border-radius: 10px;
+    color: #FFFFFF;
+}
+.qtui-icon_toast {
+    margin: 16px 0 11px;
+    display: block;
+    &.qtui-icon-success-no-circle{
+      &:before {
+          color: #FFFFFF;
+          font-size: 24px;
+      }
+    }
+    &.qtui-loading{
+      margin:14px 0 0;
+      width:30px;
+      height:30px;
+      vertical-align: baseline;
+    }
+}
+
+.qtui-toast__content {
+    margin: 0 0 14px;
+}

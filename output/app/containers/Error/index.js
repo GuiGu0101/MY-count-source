@@ -1,0 +1,1 @@
+define("app/containers/Error/index.jsx",function(e,r,n){"use strict";function o(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(r,"__esModule",{value:!0});var t=e("app/containers/Error/Common.jsx"),u=o(t);r["default"]={Common:u["default"]},n.exports=r["default"]});

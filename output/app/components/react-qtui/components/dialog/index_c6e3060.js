@@ -1,0 +1,1 @@
+define("app/components/react-qtui/components/dialog/index",function(e,t,o){"use strict";function n(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(t,"__esModule",{value:!0});var a=e("app/components/react-qtui/components/dialog/dialog"),u=n(a);t["default"]=u["default"],o.exports=t["default"]});

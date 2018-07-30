@@ -1,0 +1,32 @@
+{
+  "list": [
+//    {
+//      "user": {
+//        "accountId": "xxxxxxx",
+//        "name": "子夫"
+//      },
+//      "template": {
+//        "id": "100001",
+//        "name": "买票",
+//        "delete": false
+//      },
+//      "affectFlow": false,
+//      "affectTemplate": true,
+//      "id": "xxxx01"
+//    },
+//    {
+//      "user": {
+//        "accountId": "xxxxxxx",
+//        "name": "子夫"
+//      },
+//      "template": {
+//        "id": "100001",
+//        "name": "买票",
+//        "delete": false
+//      },
+//      "affectFlow": true,
+//      "affectTemplate": true,
+//      "id": "xxxx01"
+//    }
+  ]
+}

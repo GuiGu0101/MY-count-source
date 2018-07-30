@@ -1,48 +1,49 @@
 /**
  * Created by guigu on 2017/8/13.
  */
-import React, {PropTypes, Component} from 'react';
+import React, { PropTypes, Component } from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
-import {Link, hashHistory} from 'react-router';
+import { Link, hashHistory } from 'react-router';
 
-import 'sign.scss'
+import '../../containers/Sign/sign.scss';
 
 export default class Success extends Component {
-    constructor(props, context) {
-        super(props, context);
-        this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
-    }
+  constructor(props, context) {
+    super(props, context);
+    this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(
+      this
+    );
+  }
 
-    componentWillMount() {
+  componentWillMount() {
+    const { user } = this.props;
+    if (parseInt(user.no) < 10) {
+      user.no = '0' + user.no;
     }
+  }
 
-    componentDidMount() {
-    }
+  componentDidMount() {}
 
-
-    render() {
-        return (
-            <div className="main_BG sign_main">
-                <div className="title">重庆魅友家3周年签到系统</div>
-                <div className="sign-result">
-                    <div className="sr-no">01</div>
-                    <div className="sr-detail">
-                        <div>
-                            <div>手机</div>
-                            <div>18602321901</div>
-                        </div>
-                        <div>
-                            <div>论坛昵称</div>
-                            <div>QT鬼谷</div>
-                        </div>
-                        <div>
-                            <div>群昵称</div>
-                            <div>江北阿兴</div>
-                        </div>
-                    </div>
-                </div>
-                <a href="javascript:;" className="next">下一个</a>
-            </div>
-        )
-    }
+  render() {
+    const { user } = this.props;
+    return (
+      <div className="sign-result">
+        <div className="sr-no">{user.no}</div>
+        <div className="sr-detail">
+          <div>
+            <div>手机</div>
+            <div>{user.profile.mobile}</div>
+          </div>
+          <div>
+            <div>姓名</div>
+            <div>{user.profile.real_name}</div>
+          </div>
+          <div>
+          <div>分组序号</div>
+            <div>{user.profile.code}</div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }

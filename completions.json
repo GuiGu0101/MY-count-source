@@ -1,0 +1,200 @@
+{
+  "components": {
+    "FlowRecords.jsx": {},
+    "HideRecords.jsx": {},
+    "Back.jsx": {},
+    "Base.jsx": {},
+    "Done.jsx": {},
+    "Error.jsx": {},
+    "First.jsx": {},
+    "NotCMP.jsx": {},
+    "Wait.jsx": {},
+    "ToggleHideRecord.jsx": {},
+    "FlowList.jsx": {
+      "attributes": [
+        "showName"
+      ],
+      "props": {
+        "showName": {
+          "type": {
+            "name": "bool"
+          },
+          "required": false,
+          "description": "if cell should have arrow or link",
+          "defaultValue": {
+            "value": "false",
+            "computed": false
+          }
+        }
+      }
+    },
+    "NavBar": {},
+    "index.jsx": {
+      "attributes": [
+        "globalActions",
+        "templateActions"
+      ],
+      "props": {
+        "globalActions": {
+          "type": {
+            "name": "object"
+          },
+          "required": true,
+          "description": ""
+        },
+        "templateActions": {
+          "type": {
+            "name": "object"
+          },
+          "required": true,
+          "description": ""
+        }
+      }
+    },
+    "Checkbox.jsx": {},
+    "Date.jsx": {},
+    "Inner.jsx": {},
+    "Number.jsx": {},
+    "Radio.jsx": {},
+    "Select.jsx": {},
+    "Switch.jsx": {},
+    "Text.jsx": {},
+    "Textarea.jsx": {},
+    "TplToApprovers.jsx": {},
+    "TplToCC.jsx": {},
+    "TplToForm.jsx": {},
+    "TemplateList.jsx": {},
+    "FlowInfoLine.jsx": {},
+    "FlowInfoMultLine.jsx": {},
+    "Info.jsx": {},
+    "OperationBar.jsx": {},
+    "404.jsx": {},
+    "App.jsx": {},
+    "NavGrid.jsx": {},
+    "StandList.jsx": {},
+    "Create.jsx": {
+      "attributes": [
+        "globalActions",
+        "cardActions"
+      ],
+      "props": {
+        "globalActions": {
+          "type": {
+            "name": "object"
+          },
+          "required": true,
+          "description": ""
+        },
+        "cardActions": {
+          "type": {
+            "name": "object"
+          },
+          "required": true,
+          "description": ""
+        }
+      }
+    },
+    "Approval.jsx": {
+      "attributes": [
+        "workflowActions"
+      ],
+      "props": {
+        "workflowActions": {
+          "type": {
+            "name": "object"
+          },
+          "required": true,
+          "description": ""
+        }
+      }
+    },
+    "CCTome.jsx": {
+      "attributes": [
+        "workflowActions"
+      ],
+      "props": {
+        "workflowActions": {
+          "type": {
+            "name": "object"
+          },
+          "required": true,
+          "description": ""
+        }
+      }
+    },
+    "Launched.jsx": {
+      "attributes": [
+        "workflowActions"
+      ],
+      "props": {
+        "workflowActions": {
+          "type": {
+            "name": "object"
+          },
+          "required": true,
+          "description": ""
+        }
+      }
+    },
+    "List.jsx": {},
+    "Step1.jsx": {
+      "attributes": [
+        "globalActions",
+        "templateActions"
+      ],
+      "props": {
+        "globalActions": {
+          "type": {
+            "name": "object"
+          },
+          "required": true,
+          "description": ""
+        },
+        "templateActions": {
+          "type": {
+            "name": "object"
+          },
+          "required": true,
+          "description": ""
+        }
+      }
+    },
+    "Step2.jsx": {
+      "attributes": [
+        "globalActions",
+        "templateActions"
+      ],
+      "props": {
+        "globalActions": {
+          "type": {
+            "name": "object"
+          },
+          "required": true,
+          "description": ""
+        },
+        "templateActions": {
+          "type": {
+            "name": "object"
+          },
+          "required": true,
+          "description": ""
+        }
+      }
+    },
+    "FlowInfo.jsx": {},
+    "View.jsx": {
+      "attributes": [
+        "workflowActions"
+      ],
+      "props": {
+        "workflowActions": {
+          "type": {
+            "name": "object"
+          },
+          "required": true,
+          "description": ""
+        }
+      }
+    }
+  }
+}

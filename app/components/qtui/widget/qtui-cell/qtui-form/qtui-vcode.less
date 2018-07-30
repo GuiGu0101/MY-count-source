@@ -1,0 +1,35 @@
+@import "../../../base/fn";
+
+.qtui-cell_vcode {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+.qtui-vcode-img{
+    margin-left: 5px;
+    height: @qtuiCellHeight;
+    vertical-align: middle;
+}
+
+.qtui-vcode-btn {
+    display: inline-block;
+    height: @qtuiCellHeight;
+    margin-left: 5px;
+    padding: 0 0.6em 0 0.7em;
+    border-left: 1px solid @qtuiColorPrimary;
+    line-height: @qtuiCellHeight;
+    vertical-align: middle;
+    font-size: @qtuiCellFontSize;
+    color: #ffffff;
+    button&,a&{
+        background-color: @qtuiColorPrimary;
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 0;
+        outline: 0;
+    }
+    &:active {
+        background-color:#4797D5;
+        border-color: #4797D5;
+    }
+}

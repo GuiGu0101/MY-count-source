@@ -1,0 +1,87 @@
+@import "../../../base/fn";
+
+.qtui-label{
+  display:block;
+  width:@qtuiCellLabelWidth;
+  .text_wrap();
+}
+.qtui-input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    background-color: transparent;
+    font-size: @qtuiCellFontSize;
+    color: inherit;
+    height: unit(@qtuiCellLineHeight, em);
+    line-height: @qtuiCellLineHeight;
+
+    // hides the spin-button
+    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+.qtui-textarea {
+    display: block;
+    border: 0;
+    resize: none;
+    width: 100%;
+    color: inherit;
+    font-size: 1em;
+    line-height: inherit;
+    outline: 0;
+}
+
+.qtui-textarea-counter{
+    color: @qtuiTextColorTips;
+    text-align: right;
+    .qtui-cell_warn &{
+        color: @qtuiTextColorWarn;
+    }
+}
+
+.qtui-toptips {
+    display:none;
+    position: fixed;
+    transform: translateZ(0);
+    top: 0;
+    left: 0;
+    right: 0;
+    padding:5px;
+    font-size:14px;
+    text-align: center;
+    color: #FFF;
+    z-index: 5000;
+    .text_wrap();
+}
+.qtui-toptips_warn {
+    background-color: @qtuiColorWarn;
+}
+.qtui-toptips_info {
+    background-color: @qtuiColorPrimary;
+}
+.qtui-cells_form {
+    .qtui-cell{
+        align-items: center;
+    }
+    .qtui-cell__ft{
+        font-size:0;
+    }
+    .qtui-icon-warn{
+        display:none;
+    }
+    input, textarea, label[for]{
+        .setTapColor();
+    }
+}
+.qtui-cell_warn{
+    color:@qtuiTextColorWarn;
+    .qtui-icon-warn{display:inline-block;}
+    .qtui-cell__desc{
+        color:@qtuiTextColorWarn;
+    }
+    &.qtui-cell_desc{
+        color: inherit;
+    }
+}

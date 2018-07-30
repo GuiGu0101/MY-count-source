@@ -1,0 +1,94 @@
+.dialog .dialog-title {
+  font-size: 19px;
+  text-align: center;
+  color: #5cafef;
+}
+
+.dialog .dialog-title-desc {
+  margin-top: 6px;
+  font-size: 14px;
+  text-align: center;
+  color: #B1B1B1;
+}
+
+.dialog .dialog-input-cell .dialog-input {
+  display: flex;
+  margin-top: 13px;
+  border-radius: 2.5px;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  border: 1px solid #e1e1e1;
+}
+
+.dialog .dialog-input-cell .dialog-input .qtui-input + span {
+  position: absolute;
+  top: 14.5px;
+  right: 6px;
+  line-height: 1.5;
+}
+
+.dialog .dialog-input-cell .dl-input-body {
+  position: relative;
+  padding: 14.5px 10.5px;
+  flex: 1;
+}
+
+.dialog .dialog-input-cell .dl-input-btn {
+  position: relative;
+  padding: 14.5px 11px;
+  color: #5cafef;
+}
+
+.dialog .dialog-input-cell .dl-input-btn:after {
+  position: absolute;
+  display: block;
+  content: " ";
+  width: 1px;
+  height: 160%;
+  background-color: #e1e1e1;
+  top: 10%;
+  left: 0;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+}
+
+.dialog .dialog-input-cell .qtui-input {
+  font-size: 14px;
+  padding-right: 14px;
+}
+
+.dialog .dialog-input-cell .dialog-input-desc {
+  font-size: 14px;
+  color: #b1b1b1;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.dialog .dialog-input-cell.warn .dialog-input {
+  border-color: #EC5233;
+}
+
+.dialog .dialog-input-cell.warn .dialog-input .qtui-input::-webkit-input-placeholder {
+  color: #EC5233;
+}
+
+.dialog .dialog-input-cell.warn .dialog-input-desc {
+  color: #EC5233;
+}
+
+.dialog .dialog-agreement {
+  text-align: left;
+  margin-top: 6px;
+}
+
+.dialog .dialog-agreement .qtui-agree {
+  font-size: 12px;
+  padding: 0;
+  display: flex;
+}
+
+.dialog .dialog-agreement .qtui-agree .qtui-agree__checkbox {
+  flex: 0 0 auto;
+  margin-top: 2px;
+  margin-right: 8px;
+}

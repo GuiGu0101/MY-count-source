@@ -1,0 +1,16 @@
+{
+  "user": {
+    "accountId": "xxxxxxx",
+    "name": "子夫",
+    "avatar":"https://avatar-qingtui-im.alikunlun.com/default/v1/default_avatar_27.png",
+    "delete": true
+  },
+  "template": {
+    "id": "100001",
+    "name": "买票",
+    "delete": false
+  },
+  "affectFlow": true,
+  "affectTemplate": true,
+  "id":"xx00x1"
+}

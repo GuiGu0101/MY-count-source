@@ -1,0 +1,23 @@
+@import "../../../base/fn";
+
+// method2 accessbility
+.qtui-cells_radio{
+    .qtui-cell__ft {
+        padding-left: @qtuiCellInnerGapH;
+    }
+}
+.qtui-check {
+    // radio
+    .qtui-cells_radio & {
+        &:checked {
+            & + .qtui-icon-checked {
+                &:before {
+                    display: block;
+                    content: '\EA08';
+                    color: @qtuiColorPrimary;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

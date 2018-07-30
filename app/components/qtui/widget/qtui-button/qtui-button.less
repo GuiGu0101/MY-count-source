@@ -1,0 +1,68 @@
+@import "../../base/fn";
+@import "qtui-btn_global";
+@import "qtui-btn_default";
+@import "qtui-btn_primary";
+@import "qtui-btn_warn";
+@import "qtui-btn_disabled";
+@import "qtui-btn_plain";
+
+button, input {
+    &.qtui-btn {
+        width: 100%;
+        border-width: 0;
+        outline: 0;
+        -webkit-appearance: none;
+        &:focus {
+            outline: 0;
+        }
+
+    }
+    &.qtui-btn_inline,&.qtui-btn_mini {
+        width: auto;
+    }
+    &.qtui-btn_plain-primary,&.qtui-btn_plain-default{
+        border-width: 1px;
+        background-color: transparent;
+    }
+}
+
+.qtui-btn_mini {
+    display: inline-block;
+    padding: 0 16px;
+    line-height: @qtuiBtnMiniHeight;
+    font-size: @qtuiBtnMiniFontSize;
+}
+
+.qtui-btn_block{
+    border-radius: 0;
+    &:after{
+        border-radius: 0;
+    }
+}
+
+
+/*gap between btn*/
+.qtui-btn + .qtui-btn {
+    margin-top: @qtuiBtnDefaultGap;
+}
+
+.qtui-btn.qtui-btn_inline + .qtui-btn.qtui-btn_inline {
+    margin-top: auto;
+    margin-left: @qtuiBtnDefaultGap;
+}
+
+.qtui-btn-area {
+    margin: @qtuiCellsMarginTop @qtuiBtnDefaultGap .3em;
+}
+.qtui-btn-area_inline {
+    display: flex;
+    .qtui-btn {
+        margin-top: auto;
+        margin-right: @qtuiBtnDefaultGap;
+        width: 100%;
+        flex: 1;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

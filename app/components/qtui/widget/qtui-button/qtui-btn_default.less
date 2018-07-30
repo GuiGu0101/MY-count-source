@@ -1,0 +1,19 @@
+@import "../../base/fn";
+
+.qtui-btn_default {
+    color: @qtuiBtnDefaultFontColor;
+    background-color: @qtuiBtnDefaultBg;
+    &:not(.qtui-btn_disabled):visited {
+        color: @qtuiBtnDefaultFontColor;
+    }
+    &:not(.qtui-btn_disabled):active {
+        color: @qtuiBtnDefaultActiveFontColor;
+        background-color: @qtuiBtnDefaultActiveBg;
+        &::after{
+            border-color: @qtuiBtnDefaultActiveFontColor;
+        }
+    }
+    &::after{
+        border-color: @qtuiBtnDefaultFontColor;
+    }
+}

@@ -1,0 +1,74 @@
+@import "../../base/fn";
+
+@boxWidth: @qtuiSwitchHeight*2 - (@qtuiSwitchHeight/3);
+
+.qtui-cell_switch {
+    padding-top: (@qtuiCellHeight - @qtuiSwitchHeight) / 2;
+    padding-bottom: (@qtuiCellHeight - @qtuiSwitchHeight) / 2;
+}
+
+.qtui-switch {
+    appearance: none;
+}
+
+.qtui-switch,
+.qtui-switch-cp__box {
+    position: relative;
+    width: @boxWidth;
+    height: @qtuiSwitchHeight;
+    border: 1px solid #DFDFDF;
+    outline: 0;
+    border-radius: @qtuiSwitchHeight/2;
+    box-sizing: border-box;
+    background-color: #DFDFDF;
+    transition: background-color 0.1s, border 0.1s;
+
+    &:before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: @boxWidth - 2;
+        height: @qtuiSwitchHeight - 2;
+        border-radius: (@qtuiSwitchHeight - 2)/2;
+        background-color: #FDFDFD;
+        transition: transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
+    }
+
+    &:after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: @qtuiSwitchHeight - 2;
+        height: @qtuiSwitchHeight - 2;
+        border-radius: (@qtuiSwitchHeight - 2)/2;
+        background-color: #FFFFFF;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+        transition: transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
+    }
+}
+
+.qtui-switch-cp__input:checked ~ .qtui-switch-cp__box,
+.qtui-switch:checked {
+    border-color: @qtuiColorPrimary;
+    background-color: @qtuiColorPrimary;
+
+    &:before {
+        transform: scale(0);
+    }
+
+    &:after {
+        transform: translateX(@boxWidth - @qtuiSwitchHeight);
+    }
+}
+// 兼容IE Edge的版本
+
+.qtui-switch-cp__input {
+    position: absolute;
+    left: -9999px;
+}
+
+.qtui-switch-cp__box {
+    display: block;
+}

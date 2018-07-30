@@ -1,0 +1,115 @@
+.sign_main {
+    .title {
+        font-size: 48px;
+        text-align: center;
+        color: #ffffff;
+        margin-top: 10%;
+    }
+    .next{
+        display: block;
+        text-align: center;
+        width: 240px;
+        border-radius: 12px;
+        padding: 16px;
+        font-size: 24px;
+        color: #00ACDC;
+        background-color: #ffffff;
+        margin: 24px auto;
+    }
+}
+
+.sign input::-webkit-input-placeholder {
+    font-style: italic;
+    font-weight: 300;
+    color: darken(#00ACDC, 30%);
+}
+
+.sign input::-moz-placeholder {
+    font-style: italic;
+    font-weight: 300;
+    color: darken(#00ACDC, 30%);
+}
+
+.sign input::input-placeholder {
+    font-style: italic;
+    font-weight: 300;
+    color: darken(#00ACDC, 30%);
+}
+
+.sign {
+    width: 80%;
+    max-width: 550px;
+    margin: 32px auto 0;
+    .new-todo {
+        position: relative;
+        margin: 0;
+        width: 100%;
+        font-size: 24px;
+        text-align: center;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: 1.4em;
+        border: none;
+        outline: none;
+        color: #00ACDC;
+        padding: 16px;
+        background: rgba(255, 255, 255, 0.8);
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+    }
+    .auto-complete {
+        max-height: 340px;
+        overflow: auto;
+        .auto-complete-item {
+            position: relative;
+            color: #00ACDC;
+            font-size: 24px;
+            line-height: 2;
+            text-align: center;
+            background-color: #fff;
+            &.active,
+            &:hover {
+                background-color: rgba(255, 255, 255, .3);
+                color: #fff;
+            }
+
+        }
+    }
+}
+
+.sign-result {
+    width: 80%;
+    max-width: 560px;
+    margin: 24px auto 0;
+    display: flex;
+    align-items: center;
+    border: 2px solid #fff;
+    border-radius: 16px;
+    .sr-no {
+        color: #ffffff;
+        font-weight: bolder;
+        font-size: 128px;
+        line-height: 1;
+        padding: 16px;
+        text-align: center;
+    }
+    .sr-detail {
+        display: table;
+        font-size: 24px;
+        flex: 1;
+        > div {
+            display: table-row;
+            > div {
+                display: table-cell;
+                padding: 8px 12px;
+                color: #fff;
+                &:first-child {
+                   border-left: 2px solid #fff;
+                }
+            }
+        }
+
+    }
+}

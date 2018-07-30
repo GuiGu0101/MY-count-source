@@ -1,0 +1,90 @@
+@import "../../../base/fn";
+
+.qtui-form-preview{
+    position: relative;
+    background-color: #FFFFFF;
+    &:before{
+        .setTopLine(@qtuiCellBorderColor);
+    }
+    &:after{
+        .setBottomLine(@qtuiCellBorderColor);
+    }
+}
+.qtui-form-preview__hd{
+    position: relative;
+    padding: @qtuiCellGapV @qtuiCellGapH;
+    text-align: right;
+    line-height: 2.5em;
+    &:after{
+        .setBottomLine(@qtuiCellBorderColor);
+        left: @qtuiCellGapH;
+    }
+    .qtui-form-preview__value{
+        font-style: normal;
+        font-size: 1.6em;
+    }
+}
+.qtui-form-preview__bd{
+    padding: @qtuiCellGapV @qtuiCellGapH;
+    font-size: .9em;
+    text-align: right;
+    color: @qtuiTextColorGray;
+    line-height: 2;
+}
+.qtui-form-preview__ft{
+    position: relative;
+    line-height: 50px;
+    display: flex;
+    &:after {
+        .setTopLine(@qtuiDialogLineColor);
+    }
+}
+.qtui-form-preview__item{
+    overflow: hidden;
+}
+.qtui-form-preview__label{
+    float: left;
+    margin-right: 1em;
+    min-width: 4em;
+    color: @qtuiTextColorGray;
+    text-align: justify;
+    text-align-last: justify;
+}
+.qtui-form-preview__value{
+    display: block;
+    overflow: hidden;
+    word-break:normal;
+    word-wrap: break-word;
+}
+.qtui-form-preview__btn {
+    position: relative;
+    display: block;
+    flex: 1;
+    color: @qtuiDialogLinkColor;
+    text-align: center;
+    .setTapColor();
+    button&{
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        line-height: inherit;
+        font-size: inherit;
+    }
+    &:active {
+        background-color: @qtuiDialogLinkActiveBc;
+    }
+    &:after {
+        .setLeftLine(@qtuiDialogLineColor);
+    }
+    &:first-child {
+        &:after {
+            display: none;
+        }
+    }
+}
+.qtui-form-preview__btn_default {
+    color: @qtuiTextColorGray;
+}
+.qtui-form-preview__btn_primary {
+    color: #0BB20C;
+}

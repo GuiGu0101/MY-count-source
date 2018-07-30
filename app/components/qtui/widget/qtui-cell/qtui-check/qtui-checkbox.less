@@ -1,0 +1,30 @@
+@import "../../../base/fn";
+
+.qtui-cells_checkbox {
+    .qtui-cell__hd {
+        padding-right: @qtuiCellInnerGapH;
+    }
+    .qtui-icon-checked {
+        &:before {
+            content: '\EA01';
+            color: #C9C9C9;
+            font-size: 20px;
+            display: block;
+        }
+    }
+}
+
+// method2 accessbility
+.qtui-check {
+    // checkbox
+    .qtui-cells_checkbox & {
+        &:checked {
+            & + .qtui-icon-checked {
+                &:before {
+                    content: '\EA06';
+                    color: @qtuiColorPrimary;
+                }
+            }
+        }
+    }
+}

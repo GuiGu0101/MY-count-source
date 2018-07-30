@@ -1,0 +1,29 @@
+@import "../../base/fn";
+
+.qtui-btn_plain-primary {
+    color: @qtuiBtnPlainPrimaryColor;
+    border: 1px solid @qtuiBtnPlainPrimaryBorderColor;
+    &:not(.qtui-btn_plain-disabled):active {
+        color:@qtuiBtnPlainPrimaryActiveColor;
+        border-color: @qtuiBtnPlainPrimaryActiveBorderColor;
+    }
+    &:after {
+        border-width: 0;
+    }
+}
+
+.qtui-btn_plain-default {
+    color: @qtuiBtnPlainDefaultColor;
+    border: 1px solid @qtuiBtnPlainDefaultBorderColor;
+    &:not(.qtui-btn_plain-disabled):active {
+        color:@qtuiBtnPlainDefaultActiveColor;
+        border-color: @qtuiBtnPlainDefaultActiveBorderColor;
+    }
+    &:after {
+        border-width: 0;
+    }
+}
+.qtui-btn_plain-disabled{
+    color:rgba(0,0,0,.2);
+    border-color:rgba(0,0,0,.2);
+}

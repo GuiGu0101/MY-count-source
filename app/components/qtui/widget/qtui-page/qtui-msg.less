@@ -1,0 +1,45 @@
+@import "../../base/fn";
+@import "../qtui-button/qtui-button";
+
+.qtui-msg {
+    padding-top: @qtuiMsgPaddingTop;
+    text-align: center;
+}
+.qtui-msg__icon-area {
+    margin-bottom: @qtuiMsgIconGap;
+}
+.qtui-msg__text-area {
+    margin-bottom: @qtuiMsgTextGap;
+    padding:0 20px;
+}
+.qtui-msg__text-area a{
+    color:@qtuiLinkColorDefault;
+}
+.qtui-msg__title {
+    margin-bottom: @qtuiMsgTitleGap;
+    font-weight: 400;
+    font-size: 20px;
+}
+.qtui-msg__desc {
+    font-size: 14px;
+    color: @qtuiTextColorGray;
+}
+.qtui-msg__opr-area {
+    margin-bottom: @qtuiMsgOprGap;
+}
+.qtui-msg__extra-area {
+    margin-bottom: @qtuiMsgExtraAreaGap;
+    font-size: 14px;
+    color: @qtuiTextColorGray;
+    a{color: @qtuiLinkColorDefault;}
+}
+
+@media screen and (min-height: @qtuiMsgExtraAreaOfMinHeight) {
+    .qtui-msg__extra-area {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
